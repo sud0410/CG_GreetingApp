@@ -34,5 +34,12 @@ public class GreetingController {
     public Greeting deleteGreeting() {
         return greetingService.getGreetingMessage("delete");
     }
+    @GetMapping("/custom")
+    public Greeting getCustomGreeting(@RequestParam(required = false) String firstName,
+                                      @RequestParam(required = false) String lastName) {
+        return greetingService.getPersonalizedGreeting(firstName, lastName);
+    }
+//uc3
+
 
 }
