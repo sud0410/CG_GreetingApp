@@ -51,6 +51,11 @@ public class GreetingController {
         return greetingService.findById(id);
     }
 //uc5
+    @GetMapping("/all")
+    public List<Greeting> getAllGreetings() {
+        return greetingService.findAll();
+    }
+//Uc6
 
 
 
