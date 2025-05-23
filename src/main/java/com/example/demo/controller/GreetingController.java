@@ -62,9 +62,15 @@ public class GreetingController {
         return greetingService.update(id, greeting);
     }
 //Uc7
-
-
-
-
-
+    @DeleteMapping("/{id}")
+    public String deleteGreeting(@PathVariable long id) {
+        greetingService.deleteById(id);
+        return "Greeting with ID " + id + " has been deleted.";
+    }
 }
+//uc8
+
+
+
+
+
