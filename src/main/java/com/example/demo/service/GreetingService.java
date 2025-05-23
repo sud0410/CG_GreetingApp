@@ -20,13 +20,13 @@ public class GreetingService {
     public Greeting getGreetingMessage(String type) {
         switch (type.toLowerCase()) {
             case "post":
-                return new Greeting(0, "Hello from POST ");
+                return new Greeting(0, "Hello from POST (Via service)");
             case "put":
-                return new Greeting(0, "Hello from PUT ");
+                return new Greeting(0, "Hello from PUT (Via service)");
             case "delete":
-                return new Greeting(0, "Hello from DELETE ");
+                return new Greeting(0, "Hello from DELETE (Via service)");
             default:
-                return new Greeting(0, "Hello from GET ");
+                return new Greeting(0, "Hello from GET (Via service)");
         }
     }
 }
