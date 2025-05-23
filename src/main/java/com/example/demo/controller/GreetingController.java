@@ -46,6 +46,13 @@ public class GreetingController {
     }
 //Uc4
 
+    @GetMapping("/{id}")
+    public Greeting getGreetingById(@PathVariable long id) {
+        return greetingService.findById(id);
+    }
+//uc5
+
+
 
 
 }

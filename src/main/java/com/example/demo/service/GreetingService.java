@@ -49,6 +49,13 @@ public class GreetingService {
     public Greeting save(Greeting greeting) {
             return greetingRepository.save(greeting);
         }
+  //uc5
+
+    public Greeting findById(long id) {
+        return greetingRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Greeting not found"));
+    }
+
 
 }
 
