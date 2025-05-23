@@ -57,6 +57,13 @@ public class GreetingController {
     }
 //Uc6
 
+    @PutMapping("/{id}")
+    public Greeting updateGreeting(@PathVariable long id, @RequestBody Greeting greeting) {
+        return greetingService.update(id, greeting);
+    }
+//Uc7
+
+
 
 
 
