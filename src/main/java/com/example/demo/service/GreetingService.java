@@ -45,6 +45,10 @@ public class GreetingService {
 
             return new Greeting(0, message);
         }
+  //uc4
+    public Greeting save(Greeting greeting) {
+            return greetingRepository.save(greeting);
+        }
 
 }
 

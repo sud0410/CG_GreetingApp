@@ -40,6 +40,12 @@ public class GreetingController {
         return greetingService.getPersonalizedGreeting(firstName, lastName);
     }
 //uc3
+    @PostMapping("/save")
+    public Greeting saveGreeting(@RequestBody Greeting greeting) {
+        return greetingService.save(greeting);
+    }
+//Uc4
+
 
 
 }
